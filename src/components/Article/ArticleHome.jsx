@@ -7,6 +7,7 @@ import { base_url } from "../Helper/helper";
 import TopPicks from "../Hero/TopPicks";
 import Missed from "../HeroSection/Missed";
 import LatestNews from "../Hero/LatestNews";
+import AdBanner from "../AdBanner/AdBanner";
 
 export default function IntegratedNewsLayout({ data }) {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -129,86 +130,63 @@ export default function IntegratedNewsLayout({ data }) {
       {/* 🔲 3-column responsive grid */}
       <div className="grid grid-cols-1 lg:grid-cols-14 gap-6 w-full">
         {/* 📰 Main Article - MOBILE FIRST */}
-        <main className="order-1 lg:order-2 lg:col-span-8 space-y-8">
-          {/* Hero Section */}
-          <section className="grid grid-cols-1 lg:grid-cols-14 gap-8 items-start">
-            <div className="lg:col-span-5 space-y-5">
-              <article>
-                <h1 className="text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight text-gray-900 hover:text-blue-600 transition-colors">
-                  {data?.title}
-                </h1>
-                {data?.subtitle && (
-                  <h2 className="mt-2 text-lg lg:text-xl text-gray-600 font-medium italic">
-                    “{data?.subtitle}”
-                  </h2>
-                )}
-                <div className="flex items-center mt-4">
-                  <div className="ml-3 space-y-1">
-                    <span className="block text-sm font-semibold text-gray-800">
-                      {data?.author?.name || "Trending Storie Team"}
-                    </span>
-                    <div className="flex items-center space-x-2 text-xs text-gray-500">
-                      <span>{getReadTime(data?.content)} min read</span>
-                      <span>•</span>
-                      <time dateTime={data?.createdAt}>
-                        {new Intl.DateTimeFormat("en-GB", {
-                          day: "2-digit",
-                          month: "short",
-                          year: "numeric",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                          hour12: true,
-                          timeZone: "Asia/Kolkata",
-                        }).format(new Date(data?.createdAt))}
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </article>
+        <main className="order-1 lg:order-2 lg:col-span-8 space-y-12">
+          {/* Title + Meta */}
+          <header className="space-y-4 border-b border-gray-200 pb-6">
+            <h1 className="text-4xl font-bold leading-snug text-gray-900">
+              {data?.title}
+            </h1>
+            {data?.subtitle && (
+              <p className="text-lg text-gray-600 italic">{data.subtitle}</p>
+            )}
+            <div className="flex items-center gap-2 text-sm text-gray-500">
+              <span>{data?.author?.name || "TrendyStori Team"}</span>
+              <span>•</span>
+              <span>{getReadTime(data?.content)} min read</span>
+              <span>•</span>
+              <time dateTime={data?.createdAt}>
+                {new Intl.DateTimeFormat("en-GB", {
+                  day: "2-digit",
+                  month: "short",
+                  year: "numeric",
+                }).format(new Date(data?.createdAt))}
+              </time>
             </div>
+          </header>
 
-            <div className="lg:col-span-9">
-              <figure className="group relative rounded-xl overflow-hidden shadow-md">
-                <Image
-                  src={`${base_url}${data?.image}`}
-                  alt={data?.title}
-                  width={900}
-                  height={500}
-                  priority
-                  className="w-full h-72 lg:h-[28rem] object-cover transform group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
-                <figcaption className="absolute bottom-3 left-3 text-xs text-gray-100 bg-black/40 px-2 py-1 rounded">
-                  {data?.category?.name || "Editorial"}
-                </figcaption>
-              </figure>
-            </div>
-          </section>
+          {/* Hero Image */}
+          <figure className="rounded-xl overflow-hidden shadow">
+            <Image
+              src={`${base_url}${data?.image}`}
+              alt={data?.title}
+              width={900}
+              height={500}
+              className="w-full h-[26rem] object-cover"
+            />
+            {data?.category?.name && (
+              <figcaption className="mt-2 text-xs text-gray-500">
+                {data.category.name}
+              </figcaption>
+            )}
+          </figure>
 
           {/* Article Content */}
-          <section className="space-y-4 text-gray-800 text-base md:text-lg leading-relaxed">
+          <article className="prose prose-lg max-w-none text-gray-800 leading-relaxed">
             {typeof data?.content === "string" && (
-              <div
-                dangerouslySetInnerHTML={{ __html: data.content }}
-                className="prose blog-content"
-              />
+              <div dangerouslySetInnerHTML={{ __html: data.content }} />
             )}
-          </section>
+          </article>
 
           {/* FAQs */}
           {data?.faqs?.length > 0 && (
-            <section className="bg-gray-50 rounded-lg p-6">
-              <h2 className="text-2xl font-bold mb-4 text-center">
+            <section className="bg-gray-50 rounded-lg p-6 space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900">
                 Frequently Asked Questions
               </h2>
               {data.faqs.map((faq, index) => (
-                <div key={index} className="mb-4">
-                  <h3 className="text-lg font-semibold mb-2">
-                    Q{index + 1}: {faq.ques}
-                  </h3>
-                  <p className="text-base">
-                    <strong>Ans:</strong> {faq.ans}
-                  </p>
+                <div key={index}>
+                  <h3 className="text-lg font-semibold">{faq.ques}</h3>
+                  <p className="text-gray-700">{faq.ans}</p>
                 </div>
               ))}
             </section>
@@ -216,53 +194,27 @@ export default function IntegratedNewsLayout({ data }) {
 
           {/* Conclusion */}
           {data?.conclusion && (
-            <section>
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 text-center">
+            <section className="border-t border-gray-200 pt-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Conclusion
               </h3>
-              <p className="text-gray-800 text-base md:text-xl leading-relaxed">
-                {data.conclusion}
-              </p>
+              <p className="text-gray-700 leading-relaxed">{data.conclusion}</p>
             </section>
           )}
         </main>
 
         {/* ⬅️ Left Sidebar */}
         <aside className="order-2 lg:order-1 lg:col-span-3 space-y-6">
-          <Image
-            src="/images/ajionew.jpeg"
-            alt="Advertisement Left"
-            width={300}
-            height={250}
-            className="rounded w-full object-contain"
-          />
+          <AdBanner />
           <LatestNews news={news} />
-          <Image
-            src="/images/ajionew.jpeg"
-            alt="Advertisement Left 2"
-            width={300}
-            height={250}
-            className="rounded w-full object-contain"
-          />
+          <AdBanner />
         </aside>
 
         {/* ➡️ Right Sidebar */}
         <aside className="order-3 lg:order-3 lg:col-span-3 space-y-6">
-          <Image
-            src="/images/ajionew.jpeg"
-            alt="Advertisement Right"
-            width={300}
-            height={250}
-            className="rounded w-full object-contain"
-          />
+          <AdBanner />
           <TopPicks news={news} />
-          <Image
-            src="/images/ajionew.jpeg"
-            alt="Advertisement Right 2"
-            width={300}
-            height={250}
-            className="rounded w-full object-contain"
-          />
+          <AdBanner />
         </aside>
       </div>
 

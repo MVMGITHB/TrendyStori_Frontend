@@ -28,7 +28,6 @@ const TopPicks = ({ news = [] }) => {
           Trending
         </span>
       </div>
-
       {/* Featured Card */}
       {featured && (
         <Link
@@ -77,7 +76,6 @@ const TopPicks = ({ news = [] }) => {
           </div>
         </Link>
       )}
-
       {/* Compact list */}
       <div className="grid gap-3">
         {list.map((item, i) => (
@@ -138,16 +136,7 @@ const TopPicks = ({ news = [] }) => {
           </Link>
         ))}
       </div>
-
       {/* CTA */}
-      <div className="mt-4 text-center">
-        <Link
-          href="/"
-          className="inline-block px-4 py-2 text-sm font-semibold text-indigo-700 border border-indigo-100 rounded hover:bg-indigo-50 transition"
-        >
-          See all stories
-        </Link>
-      </div>
     </aside>
   );
 };

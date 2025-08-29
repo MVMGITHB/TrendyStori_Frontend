@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Missed from "../HeroSection/Missed";
 import axios from "axios";
 import { base_url } from "../Helper/helper";
 import { useEffect, useState } from "react";
+import AdBanner from "../AdBanner/AdBanner";
 
 function NewsUi({ url }) {
   const [heading, setHeading] = useState("");
@@ -91,6 +93,14 @@ function NewsUi({ url }) {
         </div>
       </div>
 
+      {/* Missed Section */}
+      <Missed />
+
+      {/* ✅ Mobile Ad (only shows on mobile) */}
+      <div className="max-w-7xl mx-auto px-4 py-6 block md:hidden">
+        <AdBanner />
+      </div>
+
       {/* Grid for rest of the articles */}
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 border-t mt-8 pt-8">
         {card.slice(5).map((blog, index) => (
@@ -118,8 +128,9 @@ function NewsUi({ url }) {
           </Link>
         ))}
       </div>
-
-      <Missed />
+      <div className="max-w-7xl mx-auto px-4 py-6 block md:hidden">
+        <AdBanner />
+      </div>
     </>
   );
 }

@@ -10,6 +10,7 @@ import Trending from "../HeroSection/Trending";
 import Missed from "../HeroSection/Missed";
 import FirstHero from "../Hero/FirstHero";
 import { base_url } from "../Helper/helper";
+import AdBanner from "../AdBanner/AdBanner";
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -60,13 +61,7 @@ export default function Home() {
         {/* ⬅️ Left Sidebar */}
         <aside className="lg:col-span-3 space-y-6 order-2 lg:order-1">
           <TopPicks news={news} />
-          <Image
-            src="/images/ajionew.jpeg"
-            alt="Ad"
-            width={300}
-            height={200}
-            className="rounded w-full object-contain"
-          />
+          <AdBanner />
         </aside>
 
         {/* 📰 Center Content */}
@@ -86,13 +81,7 @@ export default function Home() {
         {/* ➡️ Right Sidebar */}
         <aside className="lg:col-span-3 space-y-6 order-3">
           <LatestNews news={news} />
-          <Image
-            src="/images/ajionew.jpeg"
-            alt="Ad"
-            width={300}
-            height={200}
-            className="rounded w-full object-contain"
-          />
+          <AdBanner />
         </aside>
       </div>
 

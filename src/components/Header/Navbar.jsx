@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { useAuth } from "../context/auth";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,16 +57,21 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
         {/* Date - Hidden on mobile (shown below navbar instead) */}
         <div className="hidden sm:block text-[11px] sm:text-xs md:text-sm text-gray-600 font-light">
-          {currentDate} • {currentTime}
+          <div>{currentDate}</div>
+          <div>{currentTime}</div>
         </div>
 
-        {/* Logo */}
         <h1
-          className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-center flex-1 
-                     font-serif text-gray-900 leading-tight"
+          className="absolute left-1/2 -translate-x-1/2 sm:static sm:translate-x-0 flex justify-center items-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-serif text-gray-900 leading-tight"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          <Link href="/">Trendingstori.com</Link>
+          <Link href="/" className="flex justify-center items-center">
+            <img
+              src="/logo.png"
+              alt="Trendingstori.com Logo"
+              className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-w-full"
+            />
+          </Link>
         </h1>
 
         {/* Auth / Menu */}
@@ -113,7 +119,7 @@ const Navbar = () => {
 
       {/* 🔻 Desktop Nav */}
       <nav className="hidden sm:block border-t border-gray-200 border-b bg-white">
-        <ul className="flex justify-center space-x-4 md:space-x-8 text-[13px] md:text-sm lg:text-base font-semibold tracking-wide uppercase py-2">
+        <ul className="flex justify-center space-x-4 md:space-x-8 text-[13px] md:text-sm lg:text-xl font-semibold tracking-wide uppercase py-2">
           {categories.map((item) => (
             <li key={item}>
               <Link

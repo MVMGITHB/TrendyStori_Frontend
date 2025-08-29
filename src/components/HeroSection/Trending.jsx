@@ -16,20 +16,14 @@ function Trending({ news }) {
           Trending
           <span className="absolute -bottom-1 left-0 w-12 h-1 bg-gradient-to-r from-[#B00023] to-transparent rounded-full"></span>
         </h5>
-        <Link
-          href="/trending"
-          className="text-sm font-semibold text-gray-600 hover:text-[#B00023] transition-colors"
-        >
-          View All →
-        </Link>
       </div>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Featured Story */}
         <Link
           href={`/${featured?.category?.slug}/${featured?.slug}`}
-          className="lg:col-span-2 group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+          className="lg:col-span-5 group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
         >
           <img
             src={`${base_url}${featured?.image}`}
@@ -51,7 +45,7 @@ function Trending({ news }) {
         </Link>
 
         {/* Other Trending Stories */}
-        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {rest.map((story, i) => (
             <Link
               key={i}
