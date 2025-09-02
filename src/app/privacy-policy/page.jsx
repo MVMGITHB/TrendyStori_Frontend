@@ -90,10 +90,10 @@ export default function PrivacyPolicyPage() {
         If you have any questions or concerns about this Privacy Policy, reach
         out to us at{" "}
         <a
-          href="mailto:contact@trendingstori.com"
+          href="mailto:replyto@trendingstori.com"
           className="text-blue-600 underline"
         >
-          contact@trendingstori.com
+          replyto@trendingstori.com
         </a>
         .
       </p>

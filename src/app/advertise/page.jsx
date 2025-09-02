@@ -24,7 +24,7 @@ export default function AdvertisePage() {
           className="text-indigo-800 underline font-medium hover:text-indigo-900"
           href="mailto:ads@trendystori.com"
         >
-          ads@trendystori.com
+          replyto@trendingstori.com
         </a>
       </p>
     </main>
