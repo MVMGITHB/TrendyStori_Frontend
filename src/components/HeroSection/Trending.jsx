@@ -4,7 +4,6 @@ import { base_url } from "../Helper/helper";
 function Trending({ news }) {
   if (!news || news.length === 0) return null;
 
-  // First story as featured, rest as small cards
   const featured = news[0];
   const rest = news.slice(1, 4);
 
@@ -12,10 +11,10 @@ function Trending({ news }) {
     <div className="relative w-full px-4 md:px-8 py-10 mb-8 bg-gradient-to-b from-gray-50 to-white rounded-xl shadow-sm">
       {/* Section Header */}
       <div className="flex items-center justify-between mb-8">
-        <h5 className="text-2xl font-bold text-[#B00023] tracking-wide relative">
+        <p className="text-2xl font-bold text-[#B00023] tracking-wide relative">
           Trending
           <span className="absolute -bottom-1 left-0 w-12 h-1 bg-gradient-to-r from-[#B00023] to-transparent rounded-full"></span>
-        </h5>
+        </p>
       </div>
 
       {/* Grid Layout */}
@@ -35,9 +34,9 @@ function Trending({ news }) {
             <span className="text-xs uppercase font-bold bg-[#B00023] px-2 py-1 rounded">
               {featured?.category?.name}
             </span>
-            <h3 className="mt-2 text-xl font-bold leading-snug group-hover:underline">
+            <p className="mt-2 text-xl font-bold leading-snug group-hover:underline">
               {featured?.title}
-            </h3>
+            </p>
             <p className="hidden sm:block text-sm mt-1 text-gray-200 line-clamp-2">
               {featured?.subtitle || "Catch up on the latest trending update."}
             </p>

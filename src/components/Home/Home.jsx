@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
-import Image from "next/image";
 import TopPicks from "../Hero/TopPicks";
 import LatestNews from "../Hero/LatestNews";
 import Trending from "../HeroSection/Trending";
@@ -66,7 +65,7 @@ export default function Home() {
           }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite; /* ⬅️ slower (was 20s) */
+          animation: marquee 40s linear infinite;
           display: inline-block;
         }
       `}</style>
@@ -83,9 +82,9 @@ export default function Home() {
         <main className="lg:col-span-6 space-y-8 order-1 lg:order-2">
           {/* Hero Section */}
           <section>
-            <h1 className="text-2xl font-semibold text-gray-800 mb-3">
+            <div className="text-2xl font-semibold text-gray-800 mb-3">
               Featured News
-            </h1>
+            </div>
             <FirstHero news={news} />
           </section>
 
@@ -108,8 +107,6 @@ export default function Home() {
           <AdBanner />
         </aside>
       </div>
-
-      {/* Extra styles */}
     </div>
   );
 }

@@ -17,8 +17,9 @@ export async function generateMetadata({ params }) {
     return {
       title: data?.title || "trendingstori",
       description: data?.subtitle || "Latest article from trendingstori",
+      metadataBase: new URL("https://trendingstori.com"),
       alternates: {
-        canonical: `https://trendingstori.com/blog/${slugName}`,
+        canonical: "./",
       },
       openGraph: {
         title: data?.title,
