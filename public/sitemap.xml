@@ -1,73 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dailynewzmail.com/</loc>
+    <loc>https://trendingstori.com/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/about</loc>
+    <loc>https://trendingstori.com/about</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/contact</loc>
+    <loc>https://trendingstori.com/contact</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/privacy-policy</loc>
+    <loc>https://trendingstori.com/privacy-policy</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/terms-of-service</loc>
+    <loc>https://trendingstori.com/terms-of-service</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/advertise</loc>
+    <loc>https://trendingstori.com/advertise</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/help</loc>
+    <loc>https://trendingstori.com/help</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Added Category Pages -->
+  
+  <!-- Category Pages -->
   <url>
-    <loc>https://dailynewzmail.com/health</loc>
+    <loc>https://trendingstori.com/health</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/technology</loc>
+    <loc>https://trendingstori.com/technology</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/education</loc>
+    <loc>https://trendingstori.com/education</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/travel</loc>
+    <loc>https://trendingstori.com/travel</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/sports</loc>
+    <loc>https://trendingstori.com/sports</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/fashion</loc>
+    <loc>https://trendingstori.com/fashion</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailynewzmail.com/food</loc>
+    <loc>https://trendingstori.com/food</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

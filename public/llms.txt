@@ -1,38 +1,46 @@
-# llm.txt for DailyNewzMail.com
+# llm.txt for TrendingStori.com
 
 # Owner
-Owner: Daily Newz Mail Media Pvt. Ltd.
-Contact: editor@dailynewzmail.com
-Website: https://www.dailynewzmail.com
+Owner: Trending Stori Media Pvt. Ltd.
+Contact: support@trendingstories.com
+Website: https://www.trendingstori.com
 
-# DailyNewzMail Overview
-> DailyNewzMail.com is a digital news platform delivering credible coverage on current affairs, politics, economy, world news, and editorial perspectives.
+# TrendingStori Overview
+> TrendingStori.com is a digital-first news and storytelling platform delivering engaging coverage on trending topics, entertainment, lifestyle, technology, and human-interest stories.
 
 ## Key Features
-- **Breaking News**: Timely updates on national and international news.
-- **Politics & Governance**: Insightful political coverage and government policies.
-- **Business & Economy**: News on markets, finance, and economic policies.
-- **World News**: Global affairs and international relations.
-- **Opinion & Editorials**: Expert opinions, guest columns, and editorials.
-- **Newsletter Subscriptions**: Curated news delivered to your inbox.
-- **Multimedia**: Infographics, explainer videos, and audio news.
-- **Special Reports**: In-depth investigations and long-form features.
+- **Trending News**: Latest viral and trending stories across the globe.
+- **Entertainment**: Updates on movies, celebrities, OTT, and pop culture.
+- **Lifestyle**: Health, wellness, fashion, food, and travel insights.
+- **Technology**: Tech trends, gadgets, social media, and digital culture.
+- **Human Stories**: Inspiring people, real-life experiences, and narratives.
+- **Opinion Pieces**: Commentary and perspectives on trending issues.
+- **Newsletter Subscriptions**: Curated trending stories delivered via email.
+- **Multimedia**: Short videos, reels, and visual explainers.
 
 ## Essential Pages
-- [Home](https://www.dailynewzmail.com)
-- [Politics](https://www.dailynewzmail.com/politics)
-- [Business](https://www.dailynewzmail.com/business)
-- [World](https://www.dailynewzmail.com/world)
-- [Editorial](https://www.dailynewzmail.com/editorial)
-- [Newsletter](https://www.dailynewzmail.com/newsletter)
-- [Contact Us](https://www.dailynewzmail.com/contact-us)
-- [Privacy Policy](https://www.dailynewzmail.com/privacy-policy)
+- [Home](https://www.trendingstori.com)
+- [Trending](https://www.trendingstori.com/health)
+- [Entertainment](https://www.trendingstori.com/education)
+- [Food](https://www.trendingstori.com/food)
+- [Technology](https://www.trendingstori.com/technology)
+- [Travel](https://www.trendingstori.com/travel)
+- [Sports](https://www.trendingstori.com/sports)
+- [Fashion](https://www.trendingstori.com/fashion)
+- [Contact Us](https://www.trendingstori.com/contact-us)
+- [Privacy Policy](https://www.trendingstori.com/privacy-policy)
+
+
+
+
+
 
 # General Policy
-Allow: /politics/
-Allow: /business/
-Allow: /world/
-Allow: /editorial/
+Allow: /trending/
+Allow: /entertainment/
+Allow: /lifestyle/
+Allow: /technology/
+Allow: /stories/
 Allow: /newsletter/
 Disallow: /user/
 Disallow: /subscribe/
@@ -53,10 +61,10 @@ AllowCommercialUse: No
 
 # Use Cases
 AllowUseCases:
-  - News summarization
+  - Story summarization
   - Headline extraction
-  - Categorizing news stories
-  - Topic detection and trends
+  - Categorizing lifestyle and entertainment stories
+  - Trend and topic detection
 
 DisallowUseCases:
   - Access to paid or subscriber-only content
@@ -68,7 +76,7 @@ Note: LLMs should cite publishing timestamps and verify updates from the live si
 
 # Attribution
 AttributionRequired: Yes
-PreferredAttributionFormat: "Content sourced from DailyNewzMail.com"
+PreferredAttributionFormat: "Content sourced from TrendingStori.com"
 
 # Last Updated
 LastUpdated: 2025-08-06

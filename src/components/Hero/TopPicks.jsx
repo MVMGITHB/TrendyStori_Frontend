@@ -15,19 +15,10 @@ const TopPicks = ({ news = [] }) => {
   const list = news?.slice(1, 7) || [];
 
   return (
-    <aside className="p-4 bg-white rounded-lg shadow-md">
-      {/* Title */}
-      <div className="flex items-center justify-between mb-4">
-        <h2
-          className="text-2xl font-[var(--font-prata)]  text-indigo-600"
-          aria-hidden
-        >
-          Top Picks
-        </h2>
-        <span className="text-md uppercase tracking-wide text-black font-semibold mt-3">
-          Trending
-        </span>
-      </div>
+    <aside className="p-4 bg-white rounded-lg shadow-md" aria-label="Top Picks">
+      {/* Section Label */}
+      <p className="text-2xl font-semibold text-indigo-600 mb-4">Top Picks</p>
+
       {/* Featured Card */}
       {featured && (
         <Link
@@ -56,87 +47,93 @@ const TopPicks = ({ news = [] }) => {
                   {featured.category.name}
                 </span>
               )}
-              <span className="text-xs text-gray-400">
+              <time
+                dateTime={featured?.createdAt}
+                className="text-xs text-gray-400"
+              >
                 {new Date(featured?.createdAt).toLocaleDateString()}
-              </span>
+              </time>
               <span className="text-xs text-gray-400">
                 • {getReadTime(featured?.content)} min read
               </span>
             </div>
 
-            <h3 className="mt-2 text-lg md:text-xl font-[var(--font-prata)]  text-gray-900 group-hover:text-indigo-700 transition-colors">
+            <p className="mt-2 text-lg md:text-xl font-[var(--font-prata)] text-gray-900 group-hover:text-indigo-700 transition-colors">
               {featured?.title}
-            </h3>
+            </p>
 
             {featured?.subtitle && (
-              <p className="mt-2 text-sm text-gray-600 line-clamp-3">
+              <span className="mt-2 block text-sm text-gray-600 line-clamp-3">
                 {featured.subtitle}
-              </p>
+              </span>
             )}
           </div>
         </Link>
       )}
+
       {/* Compact list */}
-      <div className="grid gap-3">
+      <ul className="grid gap-3">
         {list.map((item, i) => (
-          <Link
-            key={item?._id || i}
-            href={`/${item?.category?.slug}/${item?.slug}`}
-            className="group block rounded-lg border border-gray-100 hover:shadow-md transition-shadow duration-200"
-          >
-            <div className="flex items-center gap-3 p-3">
-              {/* Text */}
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-1">
-                  {item?.category?.name && (
-                    <span className="text-[11px] uppercase font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
-                      {item.category.name}
-                    </span>
-                  )}
-                  {/* small trending badge for the top two in the list */}
-                  {i < 2 && (
-                    <span className="text-[11px] bg-gradient-to-r from-yellow-300 to-amber-400 text-amber-900 px-2 py-0.5 rounded font-semibold">
-                      Hot
-                    </span>
-                  )}
-                </div>
-
-                <p className="text-sm md:text-base font-medium text-gray-900 group-hover:text-indigo-600 line-clamp-2">
-                  {item.subtitle || item.title}
-                </p>
-
-                <div className="mt-1 text-xs text-gray-400 flex items-center gap-2">
-                  <span>{new Date(item?.createdAt).toLocaleDateString()}</span>
-                  <span>•</span>
-                  <span>{getReadTime(item?.content)} min read</span>
-                </div>
-              </div>
-
-              {/* Thumbnail */}
-              <div className="w-24 h-16 relative rounded overflow-hidden flex-shrink-0">
-                {item.image ? (
-                  <Image
-                    src={
-                      item.image.startsWith("http")
-                        ? item.image
-                        : `${base_url}${item.image}`
-                    }
-                    alt={item.title || "thumb"}
-                    fill
-                    sizes="96px"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs text-gray-400">
-                    No image
+          <li key={item?._id || i}>
+            <Link
+              href={`/${item?.category?.slug}/${item?.slug}`}
+              className="group block rounded-lg border border-gray-100 hover:shadow-md transition-shadow duration-200"
+            >
+              <div className="flex items-center gap-3 p-3">
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    {item?.category?.name && (
+                      <span className="text-[11px] uppercase font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
+                        {item.category.name}
+                      </span>
+                    )}
+                    {/* hot badge for first two */}
+                    {i < 2 && (
+                      <span className="text-[11px] bg-gradient-to-r from-yellow-300 to-amber-400 text-amber-900 px-2 py-0.5 rounded font-semibold">
+                        Hot
+                      </span>
+                    )}
                   </div>
-                )}
+
+                  <p className="text-sm md:text-base font-medium text-gray-900 group-hover:text-indigo-600 line-clamp-2">
+                    {item.subtitle || item.title}
+                  </p>
+
+                  <div className="mt-1 text-xs text-gray-400 flex items-center gap-2">
+                    <time dateTime={item?.createdAt}>
+                      {new Date(item?.createdAt).toLocaleDateString()}
+                    </time>
+                    <span>•</span>
+                    <span>{getReadTime(item?.content)} min read</span>
+                  </div>
+                </div>
+
+                {/* Thumbnail */}
+                <div className="w-24 h-16 relative rounded overflow-hidden flex-shrink-0">
+                  {item.image ? (
+                    <Image
+                      src={
+                        item.image.startsWith("http")
+                          ? item.image
+                          : `${base_url}${item.image}`
+                      }
+                      alt={item.title || "thumb"}
+                      fill
+                      sizes="96px"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center text-xs text-gray-400">
+                      No image
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </li>
         ))}
-      </div>
-      {/* CTA */}
+      </ul>
     </aside>
   );
 };

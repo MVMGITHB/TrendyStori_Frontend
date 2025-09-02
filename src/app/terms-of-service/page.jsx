@@ -1,24 +1,24 @@
 // app/terms-of-service/page.tsx
 
 export const metadata = {
-  title: "Terms of Service | TrendingStori",
+  title: "Terms of Service | trendingstori",
   description:
-    "Read the Terms of Service for TrendingStori. Understand your rights, responsibilities, and conditions of using our platform.",
+    "Read the Terms of Service for trendingstori. Understand your rights, responsibilities, and conditions of using our platform.",
   alternates: {
-    canonical: "https://Trendingstori.com/terms-of-service",
+    canonical: "https://trendingstori.com/terms-of-service",
   },
   openGraph: {
-    title: "Terms of Service | TrendingStori",
+    title: "Terms of Service | trendingstori",
     description:
-      "Review the Terms of Service for TrendingStori to understand your rights and responsibilities while using our platform.",
-    url: "https://Trendingstori.com/terms-of-service",
-    siteName: "TrendingStori",
+      "Review the Terms of Service for trendingstori to understand your rights and responsibilities while using our platform.",
+    url: "https://trendingstori.com/terms-of-service",
+    siteName: "trendingstori",
     images: [
       {
-        url: "https://Trendingstori.com/logo.png", // ✅ Replace with actual OG image/banner
+        url: "https://trendingstori.com/logo.png", // ✅ Replace with actual OG image/banner
         width: 1200,
         height: 630,
-        alt: "TrendingStori Terms of Service",
+        alt: "trendingstori Terms of Service",
       },
     ],
     locale: "en_US",
@@ -26,10 +26,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms of Service | TrendingStori",
+    title: "Terms of Service | trendingstori",
     description:
-      "Read the Terms of Service for TrendingStori. Learn about the conditions, rights, and responsibilities of our users.",
-    images: ["https://Trendingstori.com/logo.png"], // ✅ Replace with actual image
+      "Read the Terms of Service for trendingstori. Learn about the conditions, rights, and responsibilities of our users.",
+    images: ["https://trendingstori.com/logo.png"], // ✅ Replace with actual image
     site: "@trendingstori", // ✅ Update with real handle if available
     creator: "@trendingstori",
   },
@@ -43,7 +43,7 @@ export default function TermsPage() {
     <main className="max-w-3xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
       <p className="mb-4">
-        These Terms govern your use of <strong>TrendingStori</strong>. By
+        These Terms govern your use of <strong>trendingstori</strong>. By
         accessing or using our site, you agree to abide by them.
       </p>
       <p className="mb-2">

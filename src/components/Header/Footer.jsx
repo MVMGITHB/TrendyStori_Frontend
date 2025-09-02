@@ -21,14 +21,14 @@ const Footer = () => {
               <Link href="/">
                 <img
                   src="/logo.png"
-                  alt="Trendingstori.com Logo"
+                  alt="trendingstori.com Logo"
                   className="h-12 sm:h-10 md:h-12 w-auto"
                 />
               </Link>
             </div>
 
             <p className="text-sm text-gray-600 leading-relaxed">
-              Trendingstori.com brings you the latest news, stories, and
+              trendingstori.com brings you the latest news, stories, and
               insights from around the world. Stay informed with trustworthy
               reporting and in-depth coverage.
             </p>
@@ -143,14 +143,14 @@ const Footer = () => {
         {/* 🔹 Bottom Section */}
         <div className="border-t border-gray-200 mt-10 pt-6 text-center md:text-left text-xs text-gray-500 flex flex-col md:flex-row justify-between gap-3">
           <p>
-            © {new Date().getFullYear()} Trendingstori.com. All rights reserved.
+            © {new Date().getFullYear()} trendingstori.com. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center md:justify-end">
+          {/* <div className="flex flex-wrap gap-4 justify-center md:justify-end">
             <Link href="/terms">Terms of Use</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/cookies">Cookies</Link>
             <Link href="/contact">Contact</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

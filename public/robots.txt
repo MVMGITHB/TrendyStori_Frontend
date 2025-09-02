@@ -1,18 +1,27 @@
+# Global rules
 User-agent: *
 Disallow: /api/
 Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
 Allow: /
 
+# Specific AI / Research Bots - explicitly allowed
 User-agent: ChatGPT-User
 Allow: /
+
 User-agent: GPTBot
 Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://dailynewzmail.com/sitemap.xml
-Sitemap: https://dailynewzmail.com/llms.txt
+# Sitemaps
+Sitemap: https://trendingstori.com/sitemap.xml
+Sitemap: https://trendingstori.com/llms.txt

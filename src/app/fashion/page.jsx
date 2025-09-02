@@ -2,24 +2,24 @@
 import NewsUi from "@/components/NewsCategory/NewsUi";
 
 export const metadata = {
-  title: "Trendingstorie Fashion – Style Trends, Tips & Industry News",
+  title: "trendingstorie Fashion – Style Trends, Tips & Industry News",
   description:
-    "Discover the latest fashion news, style advice, trend reports, and wardrobe inspiration for every season on Trendingstorie.",
+    "Discover the latest fashion news, style advice, trend reports, and wardrobe inspiration for every season on trendingstorie.",
   alternates: {
-    canonical: "https://Trendingstori.com/fashion",
+    canonical: "https://trendingstori.com/fashion",
   },
   openGraph: {
-    title: "Trendingstorie Fashion – Style Trends, Tips & Industry News",
+    title: "trendingstorie Fashion – Style Trends, Tips & Industry News",
     description:
-      "Discover the latest fashion news, style advice, trend reports, and wardrobe inspiration for every season on Trendingstorie.",
-    url: "https://Trendingstori.com/fashion",
-    siteName: "Trendingstorie",
+      "Discover the latest fashion news, style advice, trend reports, and wardrobe inspiration for every season on trendingstorie.",
+    url: "https://trendingstori.com/fashion",
+    siteName: "trendingstorie",
     images: [
       {
-        url: "https://Trendingstori.com/logo.png", // ✅ Replace with your actual OG image for fashion
+        url: "https://trendingstori.com/logo.png", // ✅ Replace with your actual OG image for fashion
         width: 1200,
         height: 630,
-        alt: "Trendingstorie Fashion",
+        alt: "trendingstorie Fashion",
       },
     ],
     locale: "en_US",
@@ -27,10 +27,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trendingstorie Fashion – Style Trends, Tips & Industry News",
+    title: "trendingstorie Fashion – Style Trends, Tips & Industry News",
     description:
-      "Discover the latest fashion news, style advice, trend reports, and wardrobe inspiration for every season on Trendingstorie.",
-    images: ["https://Trendingstori.com/logo.png"], // ✅ Replace with actual category image if available
+      "Discover the latest fashion news, style advice, trend reports, and wardrobe inspiration for every season on trendingstorie.",
+    images: ["https://trendingstori.com/logo.png"], // ✅ Replace with actual category image if available
     site: "@trendingstorie", // ✅ update with your real Twitter handle
     creator: "@trendingstorie",
   },

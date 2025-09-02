@@ -16,7 +16,7 @@ export default function BreadcrumbSchema() {
     "@type": "ListItem",
     position: index + 1,
     name: name.charAt(0).toUpperCase() + name.slice(1),
-    item: `https://Trendingstori.com/${segments.slice(0, index + 1).join("/")}`,
+    item: `https://trendingstori.com/${segments.slice(0, index + 1).join("/")}`,
   }));
 
   const breadcrumbSchema = {
@@ -27,7 +27,7 @@ export default function BreadcrumbSchema() {
         "@type": "ListItem",
         position: 0,
         name: "Home",
-        item: "https://Trendingstori.com/",
+        item: "https://trendingstori.com/",
       },
       ...breadcrumbItems,
     ],

@@ -2,44 +2,44 @@ import Missed from "@/components/HeroSection/Missed";
 import Trending from "@/components/HeroSection/Trending";
 import Home from "@/components/Home/Home";
 
-// ✅ Static SEO Metadata for Trendingstori.com
+// ✅ Static SEO Metadata for trendingstori.com
 export const metadata = {
-  title: "TrendingStori - Top News, Stories & Highlights",
+  title: "trendingstori - Top News, Stories & Highlights",
   description:
-    "Stay updated with the latest trending stories, news highlights, and curated picks. Discover what's making headlines on TrendingStori.",
+    "Stay updated with the latest trending stories, news highlights, and curated picks. Discover what's making headlines on trendingstori.",
   keywords: [
     "trending stories",
     "top news",
     "latest updates",
-    "TrendingStori",
+    "trendingstori",
     "breaking news",
     "viral news",
   ],
   alternates: {
-    canonical: "https://Trendingstori.com",
+    canonical: "https://trendingstori.com",
   },
   openGraph: {
-    title: "TrendingStori - Top News, Stories & Highlights",
+    title: "trendingstori - Top News, Stories & Highlights",
     description:
-      "Catch the latest trending stories, news updates, and highlights from across the world. Stay ahead with TrendingStori.",
-    url: "https://Trendingstori.com",
-    siteName: "TrendingStori",
+      "Catch the latest trending stories, news updates, and highlights from across the world. Stay ahead with trendingstori.",
+    url: "https://trendingstori.com",
+    siteName: "trendingstori",
     images: [
       {
-        url: "https://Trendingstori.com/images/og-banner.png", // 🔁 Replace with actual OG image
+        url: "https://trendingstori.com/images/og-banner.png", // 🔁 Replace with actual OG image
         width: 1200,
         height: 630,
-        alt: "TrendingStori Hero Banner",
+        alt: "trendingstori Hero Banner",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TrendingStori - Top News, Stories & Highlights",
+    title: "trendingstori - Top News, Stories & Highlights",
     description:
-      "Explore the latest trending stories, breaking news & highlights worldwide on TrendingStori.",
-    images: ["https://Trendingstori.com/images/og-banner.png"], // 🔁 Replace with actual image
+      "Explore the latest trending stories, breaking news & highlights worldwide on trendingstori.",
+    images: ["https://trendingstori.com/images/og-banner.png"], // 🔁 Replace with actual image
     site: "@trendingstori", // ✅ update if you have a real handle
     creator: "@trendingstori",
   },

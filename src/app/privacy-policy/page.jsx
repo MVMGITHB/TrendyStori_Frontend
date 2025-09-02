@@ -1,9 +1,9 @@
 export const metadata = {
-  title: "Privacy Policy | Trendingstorie",
+  title: "Privacy Policy | trendingstorie",
   description:
-    "Learn how Trendingstorie collects, uses, and protects your personal data. Your privacy is important to us.",
+    "Learn how trendingstorie collects, uses, and protects your personal data. Your privacy is important to us.",
   alternates: {
-    canonical: "https://Trendingstori.com/privacy-policy",
+    canonical: "https://trendingstori.com/privacy-policy",
   },
 };
 
@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
         Your privacy is our priority. Learn how we protect your data.
       </p>
       <p className="mb-4">
-        Welcome to <strong>Trendingstori.com</strong> (referred to as "we,"
+        Welcome to <strong>trendingstori.com</strong> (referred to as "we,"
         "us," or "our"). We are committed to protecting your privacy and
         providing a safe online experience for all our users. This Privacy
         Policy explains the information we collect, how we use it, and the
@@ -90,16 +90,16 @@ export default function PrivacyPolicyPage() {
         If you have any questions or concerns about this Privacy Policy, reach
         out to us at{" "}
         <a
-          href="mailto:contact@Trendingstori.com"
+          href="mailto:contact@trendingstori.com"
           className="text-blue-600 underline"
         >
-          contact@Trendingstori.com
+          contact@trendingstori.com
         </a>
         .
       </p>
 
       <p className="mt-6 font-semibold">
-        Thank you for choosing Trendingstori.com!
+        Thank you for choosing trendingstori.com!
       </p>
     </main>
   );

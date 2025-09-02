@@ -63,7 +63,7 @@ const Register = () => {
         {/* Title */}
         <div className="text-center mb-6">
           <h1 className="text-3xl font-serif font-bold text-gray-900 tracking-wide">
-            Join <span className="text-indigo-800">TrendingStori</span>
+            Join <span className="text-indigo-800">trendingstori</span>
           </h1>
           <p className="mt-2 text-sm italic text-gray-600">
             “Your gateway to timeless stories & insights.”
@@ -152,7 +152,7 @@ const Register = () => {
               I consent to receive communications regarding offers & stories via
               Call, Email, SMS, and WhatsApp from{" "}
               <span className="font-semibold text-indigo-800">
-                Trendingstori.com
+                trendingstori.com
               </span>{" "}
               & its partners.
             </label>

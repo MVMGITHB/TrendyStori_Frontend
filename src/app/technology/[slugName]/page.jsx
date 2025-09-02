@@ -3,7 +3,7 @@ import { base_url } from "@/components/Helper/helper";
 import axios from "axios";
 import Script from "next/script";
 
-const Base_url = "https://Trendingstori.com/";
+const Base_url = "https://trendingstori.com/";
 
 export async function generateMetadata({ params }) {
   const { slugName } = await params;
@@ -15,17 +15,17 @@ export async function generateMetadata({ params }) {
     const data = response.data;
 
     return {
-      title: data?.title || "TrendingStori",
-      description: data?.subtitle || "Latest article from TrendingStori",
+      title: data?.title || "trendingstori",
+      description: data?.subtitle || "Latest article from trendingstori",
       alternates: {
-        canonical: `https://Trendingstori.com/blog/${slugName}`,
+        canonical: `https://trendingstori.com/blog/${slugName}`,
       },
       openGraph: {
         title: data?.title,
         description: data?.subtitle,
-        url: `https://Trendingstori.com/blog/${slugName}`,
+        url: `https://trendingstori.com/blog/${slugName}`,
         type: "article",
-        siteName: "TrendingStori",
+        siteName: "trendingstori",
         images: [
           {
             url: `${base_url}${data?.image}`,
@@ -45,8 +45,8 @@ export async function generateMetadata({ params }) {
   } catch (error) {
     console.error("SEO metadata error:", error);
     return {
-      title: "TrendingStori",
-      description: "Latest news, blogs and stories from TrendingStori.",
+      title: "trendingstori",
+      description: "Latest news, blogs and stories from trendingstori.",
     };
   }
 }
@@ -68,13 +68,13 @@ export default async function Page({ params }) {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://Trendingstori.com",
+          item: "https://trendingstori.com",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: data1?.title,
-          item: `https://Trendingstori.com/blog/${slugName}`,
+          item: `https://trendingstori.com/blog/${slugName}`,
         },
       ],
     };
@@ -84,22 +84,22 @@ export default async function Page({ params }) {
       "@type": "Article",
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `https://Trendingstori.com/blog/${slugName}`,
+        "@id": `https://trendingstori.com/blog/${slugName}`,
       },
       headline: data1?.title,
       description: data1?.subtitle,
       image: [`${base_url}${data1?.image}`],
       author: {
         "@type": "Organization",
-        name: "TrendingStori",
-        url: "https://Trendingstori.com",
+        name: "trendingstori",
+        url: "https://trendingstori.com",
       },
       publisher: {
         "@type": "Organization",
-        name: "TrendingStori",
+        name: "trendingstori",
         logo: {
           "@type": "ImageObject",
-          url: "https://Trendingstori.com/images/logo.png", // ✅ Update to actual logo path
+          url: "https://trendingstori.com/images/logo.png", // ✅ Update to actual logo path
         },
       },
       datePublished: data1?.createdAt,

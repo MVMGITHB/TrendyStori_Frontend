@@ -2,24 +2,24 @@
 import NewsUi from "@/components/NewsCategory/NewsUi";
 
 export const metadata = {
-  title: "Trendingstorie Health – Trusted Health News & Wellness Tips",
+  title: "trendingstorie Health – Trusted Health News & Wellness Tips",
   description:
-    "Get the latest health insights, medical news, wellness advice, and fitness tips to support your well-being on Trendingstorie.",
+    "Get the latest health insights, medical news, wellness advice, and fitness tips to support your well-being on trendingstorie.",
   alternates: {
-    canonical: "https://Trendingstori.com/health",
+    canonical: "https://trendingstori.com/health",
   },
   openGraph: {
-    title: "Trendingstorie Health – Trusted Health News & Wellness Tips",
+    title: "trendingstorie Health – Trusted Health News & Wellness Tips",
     description:
-      "Get the latest health insights, medical news, wellness advice, and fitness tips to support your well-being on Trendingstorie.",
-    url: "https://Trendingstori.com/health",
-    siteName: "Trendingstorie",
+      "Get the latest health insights, medical news, wellness advice, and fitness tips to support your well-being on trendingstorie.",
+    url: "https://trendingstori.com/health",
+    siteName: "trendingstorie",
     images: [
       {
-        url: "https://Trendingstori.com/logo.png", // ✅ Replace with a health-related OG image if possible
+        url: "https://trendingstori.com/logo.png", // ✅ Replace with a health-related OG image if possible
         width: 1200,
         height: 630,
-        alt: "Trendingstorie Health News",
+        alt: "trendingstorie Health News",
       },
     ],
     locale: "en_US",
@@ -27,10 +27,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trendingstorie Health – Trusted Health News & Wellness Tips",
+    title: "trendingstorie Health – Trusted Health News & Wellness Tips",
     description:
-      "Get the latest health insights, medical news, wellness advice, and fitness tips to support your well-being on Trendingstorie.",
-    images: ["https://Trendingstori.com/logo.png"], // ✅ Replace with health-related image if available
+      "Get the latest health insights, medical news, wellness advice, and fitness tips to support your well-being on trendingstorie.",
+    images: ["https://trendingstori.com/logo.png"], // ✅ Replace with health-related image if available
     site: "@trendingstorie", // ✅ Update with your actual Twitter/X handle
     creator: "@trendingstorie",
   },

@@ -56,36 +56,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 🔲 Main Grid Layout (NYT style 3-column) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 px-4 md:px-6 py-6 w-full max-w-[1400px] mx-auto">
-        {/* ⬅️ Left Sidebar */}
-        <aside className="lg:col-span-3 space-y-6 order-2 lg:order-1">
-          <TopPicks news={news} />
-          <AdBanner />
-        </aside>
-
-        {/* 📰 Center Content */}
-        <main className="lg:col-span-6 space-y-8 order-1 lg:order-2">
-          <FirstHero news={news} />
-
-          {/* Divider (NYT triple-line style) */}
-          <div className="space-y-2">
-            <hr className="h-px bg-gray-500 border-0" />
-            <hr className="h-px bg-gray-500 border-0" />
-            <hr className="h-px bg-gray-500 border-0" />
-          </div>
-
-          <Trending news={news} />
-        </main>
-
-        {/* ➡️ Right Sidebar */}
-        <aside className="lg:col-span-3 space-y-6 order-3">
-          <LatestNews news={news} />
-          <AdBanner />
-        </aside>
-      </div>
-
-      {/* Extra styles */}
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -96,10 +66,50 @@ export default function Home() {
           }
         }
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 40s linear infinite; /* ⬅️ slower (was 20s) */
           display: inline-block;
         }
       `}</style>
+
+      {/* 🔲 Main Grid Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 px-4 md:px-6 py-6 w-full max-w-[1800px] mx-auto">
+        {/* ⬅️ Left Sidebar */}
+        <aside className="lg:col-span-3 space-y-6 order-2 lg:order-1">
+          <TopPicks news={news} />
+          <AdBanner />
+        </aside>
+
+        {/* 📰 Main Content */}
+        <main className="lg:col-span-6 space-y-8 order-1 lg:order-2">
+          {/* Hero Section */}
+          <section>
+            <h1 className="text-2xl font-semibold text-gray-800 mb-3">
+              Featured News
+            </h1>
+            <FirstHero news={news} />
+          </section>
+
+          {/* Divider */}
+          <div className="space-y-2">
+            <hr className="h-px bg-gray-500 border-0" />
+            <hr className="h-px bg-gray-500 border-0" />
+            <hr className="h-px bg-gray-500 border-0" />
+          </div>
+
+          {/* Trending Section */}
+          <section>
+            <Trending news={news} />
+          </section>
+        </main>
+
+        {/* ➡️ Right Sidebar */}
+        <aside className="lg:col-span-3 space-y-6 order-3">
+          <LatestNews news={news} />
+          <AdBanner />
+        </aside>
+      </div>
+
+      {/* Extra styles */}
     </div>
   );
 }

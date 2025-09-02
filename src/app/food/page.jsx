@@ -2,24 +2,24 @@
 import NewsUi from "@/components/NewsCategory/NewsUi";
 
 export const metadata = {
-  title: "Trendingstorie Food – Recipes, Food Trends & Culinary News",
+  title: "trendingstorie Food – Recipes, Food Trends & Culinary News",
   description:
-    "Explore delicious recipes, the latest food trends, cooking tips, and culinary stories to satisfy every palate on Trendingstorie.",
+    "Explore delicious recipes, the latest food trends, cooking tips, and culinary stories to satisfy every palate on trendingstorie.",
   alternates: {
-    canonical: "https://Trendingstori.com/food",
+    canonical: "https://trendingstori.com/food",
   },
   openGraph: {
-    title: "Trendingstorie Food – Recipes, Food Trends & Culinary News",
+    title: "trendingstorie Food – Recipes, Food Trends & Culinary News",
     description:
-      "Explore delicious recipes, the latest food trends, cooking tips, and culinary stories to satisfy every palate on Trendingstorie.",
-    url: "https://Trendingstori.com/food",
-    siteName: "Trendingstorie",
+      "Explore delicious recipes, the latest food trends, cooking tips, and culinary stories to satisfy every palate on trendingstorie.",
+    url: "https://trendingstori.com/food",
+    siteName: "trendingstorie",
     images: [
       {
-        url: "https://Trendingstori.com/logo.png", // ✅ Replace with food-specific OG image if available
+        url: "https://trendingstori.com/logo.png", // ✅ Replace with food-specific OG image if available
         width: 1200,
         height: 630,
-        alt: "Trendingstorie Food",
+        alt: "trendingstorie Food",
       },
     ],
     locale: "en_US",
@@ -27,10 +27,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trendingstorie Food – Recipes, Food Trends & Culinary News",
+    title: "trendingstorie Food – Recipes, Food Trends & Culinary News",
     description:
-      "Explore delicious recipes, the latest food trends, cooking tips, and culinary stories to satisfy every palate on Trendingstorie.",
-    images: ["https://Trendingstori.com/logo.png"], // ✅ Replace with food-specific image if available
+      "Explore delicious recipes, the latest food trends, cooking tips, and culinary stories to satisfy every palate on trendingstorie.",
+    images: ["https://trendingstori.com/logo.png"], // ✅ Replace with food-specific image if available
     site: "@trendingstorie", // ✅ Update with your real Twitter/X handle
     creator: "@trendingstorie",
   },

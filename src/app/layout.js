@@ -24,7 +24,7 @@ const prata = Prata({
 });
 
 export const metadata = {
-  title: "TrendingStori",
+  title: "trendingstori",
   description: "Get Latest News and Updates",
   icons: {
     icon: "/images/favicon.png", // served from /public

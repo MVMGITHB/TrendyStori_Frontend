@@ -2,24 +2,24 @@
 import NewsUi from "@/components/NewsCategory/NewsUi";
 
 export const metadata = {
-  title: "Trendingstorie Education – Learning, Policy & Study Insights",
+  title: "trendingstorie Education – Learning, Policy & Study Insights",
   description:
-    "Stay updated with Trendingstorie Education: news, policies, study tips, and academic trends that matter for learners of all ages.",
+    "Stay updated with trendingstorie Education: news, policies, study tips, and academic trends that matter for learners of all ages.",
   alternates: {
-    canonical: "https://Trendingstori.com/education",
+    canonical: "https://trendingstori.com/education",
   },
   openGraph: {
-    title: "Trendingstorie Education – Learning, Policy & Study Insights",
+    title: "trendingstorie Education – Learning, Policy & Study Insights",
     description:
-      "Stay updated with Trendingstorie Education: news, policies, study tips, and academic trends that matter for learners of all ages.",
-    url: "https://Trendingstori.com/education",
-    siteName: "Trendingstorie",
+      "Stay updated with trendingstorie Education: news, policies, study tips, and academic trends that matter for learners of all ages.",
+    url: "https://trendingstori.com/education",
+    siteName: "trendingstorie",
     images: [
       {
-        url: "https://Trendingstori.com/logo.png", // ✅ Replace with actual OG image for education
+        url: "https://trendingstori.com/logo.png", // ✅ Replace with actual OG image for education
         width: 1200,
         height: 630,
-        alt: "Trendingstorie Education",
+        alt: "trendingstorie Education",
       },
     ],
     locale: "en_US",
@@ -27,10 +27,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trendingstorie Education – Learning, Policy & Study Insights",
+    title: "trendingstorie Education – Learning, Policy & Study Insights",
     description:
-      "Stay updated with Trendingstorie Education: news, policies, study tips, and academic trends that matter for learners of all ages.",
-    images: ["https://Trendingstori.com/logo.png"], // ✅ Replace with actual image
+      "Stay updated with trendingstorie Education: news, policies, study tips, and academic trends that matter for learners of all ages.",
+    images: ["https://trendingstori.com/logo.png"], // ✅ Replace with actual image
     site: "@trendingstorie", // ✅ update with your real Twitter handle if available
     creator: "@trendingstorie",
   },

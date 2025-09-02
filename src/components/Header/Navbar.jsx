@@ -68,7 +68,7 @@ const Navbar = () => {
           <Link href="/" className="flex justify-center items-center">
             <img
               src="/logo.png"
-              alt="Trendingstori.com Logo"
+              alt="trendingstori.com Logo"
               className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-w-full"
             />
           </Link>

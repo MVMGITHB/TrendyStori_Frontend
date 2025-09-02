@@ -57,7 +57,7 @@ const Login = () => {
         <div className="text-center mb-6">
           <h1 className="text-3xl font-serif font-bold text-gray-900 tracking-wide">
             Welcome Back to{" "}
-            <span className="text-indigo-800">TrendingStori</span>
+            <span className="text-indigo-800">trendingstori</span>
           </h1>
           <p className="mt-2 text-sm italic text-gray-600">
             “Log in to continue your journey.”
