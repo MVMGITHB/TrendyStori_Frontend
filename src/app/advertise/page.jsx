@@ -3,7 +3,7 @@ export const metadata = {
   description:
     "Promote your brand on TrendyStori and reach a wide audience interested in lifestyle, stories, insights, and more.",
   alternates: {
-    canonical: "https://trendystori.com/advertise",
+    canonical: "https://trendingstori.com/advertise",
   },
 };
 
@@ -22,7 +22,7 @@ export default function AdvertisePage() {
         Email us at{" "}
         <a
           className="text-indigo-800 underline font-medium hover:text-indigo-900"
-          href="mailto:ads@trendystori.com"
+          href="mailto:ads@trendingstori.com"
         >
           replyto@trendingstori.com
         </a>

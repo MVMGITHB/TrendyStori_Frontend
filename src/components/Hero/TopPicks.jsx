@@ -21,10 +21,13 @@ const TopPicks = ({ news = [] }) => {
       aria-label="Top Picks"
     >
       {/* Section Label */}
-      <p className="text-2xl font-bold text-indigo-700 mb-5 tracking-tight">
-        Top Picks
-      </p>
 
+      <div className="flex items-center gap-2 mb-4">
+        <span className="h-6 w-1.5 rounded-full bg-gradient-to-b from-indigo-600 to-blue-500"></span>
+        <p className="text-xl md:text-2xl font-bold text-gray-800 tracking-wide">
+          Top Picks
+        </p>
+      </div>
       {/* Featured Card */}
       {featured && (
         <Link
