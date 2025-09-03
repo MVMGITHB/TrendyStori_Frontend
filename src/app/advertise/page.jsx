@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Advertise with Us | TrendyStori",
+  title: "Advertise with Us | trendingstori",
   description:
-    "Promote your brand on TrendyStori and reach a wide audience interested in lifestyle, stories, insights, and more.",
+    "Promote your brand on trendingstori and reach a wide audience interested in lifestyle, stories, insights, and more.",
   alternates: {
     canonical: "https://trendingstori.com/advertise",
   },
@@ -16,7 +16,7 @@ export default function AdvertisePage() {
       <p className="mb-4 text-gray-700 font-serif leading-relaxed">
         Want to showcase your brand to a wide and engaged audience? Get in touch
         with us for tailored advertising opportunities on{" "}
-        <span className="font-semibold text-indigo-800">TrendyStori</span>.
+        <span className="font-semibold text-indigo-800">trendingstori</span>.
       </p>
       <p className="text-gray-700 font-serif">
         Email us at{" "}
