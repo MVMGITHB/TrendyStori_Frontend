@@ -46,7 +46,7 @@ const Login = () => {
 
         localStorage.setItem("auth", JSON.stringify(response.data));
       setTimeout(() => {
-        // router.push("/");
+        router.push("/");
       }, 1500);
     } catch (error) {
       if (error.response?.status === 401) {

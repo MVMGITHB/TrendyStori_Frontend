@@ -87,9 +87,10 @@ const Navbar = () => {
           <div className="hidden sm:flex gap-4 text-gray-700 items-center">
             {auth?.user ? (
               <>
-                <span className="uppercase font-semibold">
-                  {auth.user.name}
-                </span>
+                <span className="uppercase font-semibold border-2 rounded-full w-10 h-10 flex items-center justify-center">
+  {user1?.name ? user1.name.charAt(0) : ""}
+</span>
+
                 <button
                   onClick={handleLogout}
                   className="text-red-600 hover:underline transition-colors"
