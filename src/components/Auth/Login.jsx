@@ -32,14 +32,10 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${base_url1}/api/users/login`, formData);
+      await axios.post(`${base_url1}/api/users/login`, formData);
       setSuccessMsg("Login successful!");
-
-      console.log(res.data.user)
       setTimeout(() => {
-        localStorage.setItem("user",JSON.stringify(res.data.user))
-        localStorage.setItem("token",JSON.stringify(res.data.token))
-        router.push("/");
+        // router.push("/");
       }, 1500);
     } catch (error) {
       if (error.response?.status === 401) {
