@@ -4,9 +4,11 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { base_url, base_url1 } from "../Helper/helper";
+import { useAuth } from "../context/auth";
 
 const Login = () => {
   const router = useRouter();
+  const [auth, setAuth] = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -32,8 +34,17 @@ const Login = () => {
     setLoading(true);
 
     try {
-      await axios.post(`${base_url1}/api/users/login`, formData);
+     const response =  await axios.post(`${base_url1}/api/users/login`, formData);
       setSuccessMsg("Login successful!");
+
+
+      setAuth({
+          ...auth,
+          user: response.data.user,
+          token: response.data.token,
+        });
+
+        localStorage.setItem("auth", JSON.stringify(response.data));
       setTimeout(() => {
         // router.push("/");
       }, 1500);

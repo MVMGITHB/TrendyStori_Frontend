@@ -17,10 +17,24 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+
+
+  
+
   const handleLogout = () => {
-    setAuth({ ...auth, user: null, token: "" });
+    setAuth({
+      ...auth,
+      user: null,
+      token: "",
+    });
     localStorage.removeItem("auth");
   };
+
+  // const handleLogout = () => {
+  //   setAuth({ ...auth, user: null, token: "" });
+  //   localStorage.removeItem("auth");
+  // };
 
   const categories = [
     "Health",
