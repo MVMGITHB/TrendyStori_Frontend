@@ -3,7 +3,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { base_url } from "../Helper/helper";
+import { base_url, base_url1 } from "../Helper/helper";
 
 const Login = () => {
   const router = useRouter();
@@ -32,9 +32,13 @@ const Login = () => {
     setLoading(true);
 
     try {
-      await axios.post(`${base_url}/api/auth/login`, formData);
+      const res = await axios.post(`${base_url1}/api/users/login`, formData);
       setSuccessMsg("Login successful!");
+
+      console.log(res.data.user)
       setTimeout(() => {
+        localStorage.setItem("user",JSON.stringify(res.data.user))
+        localStorage.setItem("token",JSON.stringify(res.data.token))
         router.push("/");
       }, 1500);
     } catch (error) {

@@ -5,12 +5,22 @@ import Link from "next/link";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { useAuth } from "../context/auth";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [auth, setAuth] = useAuth();
   const pathname = usePathname();
   const [time, setTime] = useState(new Date());
+
+    const router = useRouter();
+
+  const user1 = JSON.parse(localStorage.getItem("user"))
+  const token = JSON.parse(localStorage.getItem("token"))
+
+  // console.log("user",user1.name)
+  
+  // console.log("user1",user1)
 
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000);
@@ -19,7 +29,10 @@ const Navbar = () => {
 
   const handleLogout = () => {
     setAuth({ ...auth, user: null, token: "" });
-    localStorage.removeItem("auth");
+    // localStorage.removeItem("auth");
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+     router.push("/login");
   };
 
   const categories = [
@@ -71,11 +84,13 @@ const Navbar = () => {
         {/* Auth / Menu */}
         <div className="flex items-center gap-3 text-xs sm:text-sm md:text-base font-medium">
           <div className="hidden sm:flex gap-4 text-gray-700 items-center">
-            {auth?.user ? (
+            {user1?.name ? (
               <>
-                <span className="uppercase font-semibold">
-                  {auth.user.name}
-                </span>
+              <span className="uppercase font-semibold border-2 rounded-full w-10 h-10 flex items-center justify-center">
+  {user1?.name ? user1.name.charAt(0) : ""}
+</span>
+
+
                 <button
                   onClick={handleLogout}
                   className="text-red-600 hover:underline transition-colors"
