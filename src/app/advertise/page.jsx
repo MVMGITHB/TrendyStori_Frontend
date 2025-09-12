@@ -12,6 +12,7 @@ export default function AdvertisePage() {
     <main className="max-w-3xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4 font-serif text-gray-900">
         Advertise with Us
+        
       </h1>
       <p className="mb-4 text-gray-700 font-serif leading-relaxed">
         Want to showcase your brand to a wide and engaged audience? Get in touch

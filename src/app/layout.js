@@ -4,7 +4,7 @@ import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Header/Footer";
 import { AuthProvider } from "@/components/context/auth";
 import BreadcrumbSchema from "@/components/Seo/breadcrumb";
-// import DailyNewzMailPopup from "@/components/popup/registerpopup"; // enable if needed
+import Breadcrumb from "@/components/BreadCrumb/BreadcrumbVisible";
 
 // ✅ Fonts
 const geistSans = Geist({
@@ -23,6 +23,7 @@ const prata = Prata({
   variable: "--font-prata",
 });
 
+// ✅ Metadata only works in Server Components
 export const metadata = {
   title: "trendingstori",
   description: "Get Latest News and Updates",
@@ -41,6 +42,9 @@ export default function RootLayout({ children }) {
           <div className="flex flex-col min-h-screen font-sans">
             {/* 🔝 Navbar (Logo can use font-prata in component) */}
             <Navbar />
+            <div className="w-full bg-gray-100">
+              <Breadcrumb />
+            </div>
 
             {/* <DailyNewzMailPopup /> */}
 
