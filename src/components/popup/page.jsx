@@ -22,7 +22,7 @@ export default function EVPopup({ data }) {
 
   return (
     showPopup && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-2 sm:p-4">
+      <div className="fixed inset-0 z-50 flex items-center justify-center  p-2 sm:p-4">
         <div className="relative w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl rounded-lg overflow-hidden bg-white shadow-lg max-h-[90vh]">
           {/* Close button */}
           <button
