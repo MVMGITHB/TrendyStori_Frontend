@@ -28,7 +28,9 @@ export default function EVPopup({ data }) {
           <button
             onClick={handleClose}
             aria-label="Close popup"
-            className="absolute top-2 right-2 sm:top-3 sm:right-3 text-gray-700 text-2xl sm:text-3xl font-bold hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+            className="absolute top-2 right-2 sm:top-3 sm:right-3 
+                       text-red-600 text-2xl sm:text-3xl font-bold
+                       hover:text-red-700 focus:outline-none"
           >
             &times;
           </button>
