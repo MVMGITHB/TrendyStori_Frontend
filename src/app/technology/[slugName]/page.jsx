@@ -1,5 +1,6 @@
 import Article from "@/components/Article/Article";
 import { base_url } from "@/components/Helper/helper";
+import EVPopup from "@/components/popup/page";
 import axios from "axios";
 import Script from "next/script";
 
@@ -60,6 +61,7 @@ export default async function Page({ params }) {
       `${base_url}/api/blog/getOneBlogByslug/${slugName}`
     );
     const data1 = response.data;
+    console.log(data1);
 
     const breadcrumbSchema = {
       "@context": "https://schema.org",
