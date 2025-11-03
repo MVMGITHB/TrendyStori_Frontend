@@ -108,7 +108,7 @@ const Footer = () => {
               <p className="text-sm text-gray-600">Follow us on social media</p>
               <div className="flex gap-4 mt-3">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/Trendingstori/"
                   target="_blank"
                   className="hover:text-blue-600"
                 >
