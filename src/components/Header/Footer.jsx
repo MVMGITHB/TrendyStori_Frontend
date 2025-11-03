@@ -122,7 +122,7 @@ const Footer = () => {
                   <FaTwitter size={18} />
                 </a>
                 <a
-                  href="https://www.instagram.com/tren.dingstori?igsh=MWFta2U5cTNkdGJ5ZQ%3D%3D&utm_source=qr"
+                  href="https://www.instagram.com/tren.dingstori/"
                   target="_blank"
                   className="hover:text-pink-500"
                 >
