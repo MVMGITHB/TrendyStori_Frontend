@@ -5,6 +5,7 @@ import Footer from "@/components/Header/Footer";
 import { AuthProvider } from "@/components/context/auth";
 import BreadcrumbSchema from "@/components/Seo/breadcrumb";
 import Breadcrumb from "@/components/BreadCrumb/BreadcrumbVisible";
+import Script from "next/script";
 
 // ✅ Fonts
 const geistSans = Geist({
@@ -37,7 +38,7 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
     <head>
-       <script
+       {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-VPMXVFHM8T"
         ></script>
@@ -50,11 +51,27 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-VPMXVFHM8T');
           `,
           }}
-        />
+        /> */}
     </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${prata.variable} antialiased`}
       >
+
+
+         <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-VPMXVFHM8T"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VPMXVFHM8T');
+          `}
+        </Script>
+
+
         <AuthProvider>
           <div className="flex flex-col min-h-screen font-sans">
             {/* 🔝 Navbar (Logo can use font-prata in component) */}
