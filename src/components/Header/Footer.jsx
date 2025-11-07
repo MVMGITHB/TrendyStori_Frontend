@@ -115,7 +115,7 @@ const Footer = () => {
                   <FaFacebookF size={18} />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/trendingstori"
                   target="_blank"
                   className="hover:text-sky-500"
                 >
@@ -128,20 +128,24 @@ const Footer = () => {
                 >
                   <FaInstagram size={18} />
                 </a>
-                <a
+
+                {/* <a
                   href="https://youtube.com"
                   target="_blank"
                   className="hover:text-red-600"
                 >
                   <FaYoutube size={18} />
-                </a>
-                <a
+                </a> */}
+
+                {/* <a
                   href="https://linkedin.com"
                   target="_blank"
                   className="hover:text-blue-700"
                 >
                   <FaLinkedinIn size={18} />
-                </a>
+                </a> */}
+
+
               </div>
             </div>
           </div>
