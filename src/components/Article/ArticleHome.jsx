@@ -15,9 +15,7 @@ export default function IntegratedNewsLayout({ data }) {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [news, setNews] = useState([]);
 
-
-
-  console.log("data is " , data)
+  console.log("data is ", data);
   const fetchdata = async () => {
     try {
       const res = await axios.get(`${base_url}/api/blog/getAllBlog`);
@@ -157,10 +155,11 @@ export default function IntegratedNewsLayout({ data }) {
               <p className="text-lg text-gray-600 italic">{data.subtitle}</p>
             )}
             <div className="flex items-center gap-2 text-sm text-gray-500">
-             <Link href={`/author/${data?.author?.slug}`}>
-          <span className="text-blue-600">{data?.author?.name || "trendingstori Team"}</span>
-</Link>
-
+              <Link href={`/author/${data?.author?.slug}`}>
+                <span className="text-blue-600">
+                  {data?.author?.name || "trendingstori Team"}
+                </span>
+              </Link>
 
               <span>•</span>
               <span>{getReadTime(data?.content)} min read</span>
