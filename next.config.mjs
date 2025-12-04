@@ -5,7 +5,7 @@ const nextConfig = {
     domains: [
       "api.dailynewzmail.com",
       "tse1.mm.bing.net",
-      "trendingstori.dailynewzmail.com",
+      "trendingstori.dailynewzmail.com","api.shopsmaart.com",
     ], // 👈 whitelist your API domain
   },
 };

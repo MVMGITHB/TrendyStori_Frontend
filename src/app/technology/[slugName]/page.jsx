@@ -1,6 +1,6 @@
 import Article from "@/components/Article/Article";
 import { base_url } from "@/components/Helper/helper";
-import EVPopup from "@/components/popup/page";
+// import EVPopup from "@/components/popup/page";
 import axios from "axios";
 import Script from "next/script";
 
